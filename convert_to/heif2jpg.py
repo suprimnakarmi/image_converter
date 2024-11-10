@@ -13,10 +13,6 @@ import glob
 from concurrent.futures import ThreadPoolExecutor
 
 
-file_path= "/Users/suprimnakarmi/projects/ocr_reports/dataset/"
-dest_path = "/Users/suprimnakarmi/projects/ocr_reports/"
-
-
 def conversion(file:str, dest_path:str):
     '''
     converts the HEIC images to Jpeg
@@ -39,7 +35,7 @@ def conversion(file:str, dest_path:str):
     image.save(os.path.join(dest_path,file_name + ".jpg"), format='jpeg')
 
 
-def heif_to_jpeg(file_path:str, dest_path:str):
+def heif_to_jpeg(file_path:str="/Users/suprimnakarmi/projects/ocr_reports/dataset/", dest_path:str="/Users/suprimnakarmi/projects/ocr_reports/"):
     '''
     Use multithreading to write the jpeg file
 
