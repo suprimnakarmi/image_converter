@@ -35,7 +35,7 @@ def conversion(file:str, dest_path:str):
     image.save(os.path.join(dest_path,file_name + ".jpg"), format='jpeg')
 
 
-def heif_to_jpeg(file_path:str="/Users/suprimnakarmi/projects/ocr_reports/dataset/", dest_path:str="/Users/suprimnakarmi/projects/ocr_reports/"):
+def heif_to_jpeg(file_path:str, dest_path:str):
     '''
     Use multithreading to write the jpeg file
 
@@ -49,7 +49,7 @@ def heif_to_jpeg(file_path:str="/Users/suprimnakarmi/projects/ocr_reports/datase
 
 start_time = time.perf_counter()
 register_heif_opener()
-heif_to_jpeg(file_path, dest_path)
+heif_to_jpeg(file_path="/Users/suprimnakarmi/projects/ocr_reports/dataset/", dest_path="/Users/suprimnakarmi/projects/ocr_reports/")
 end_time = time.perf_counter()
 time_taken = end_time - start_time
 print(f"Time taken for conversion: {time_taken}")
