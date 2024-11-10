@@ -8,6 +8,6 @@ setup(
     description="Packages that converts image format into other format. It is sometimes required for further proceed using machine learning models",
     install_requires =[
         "pillow_heif==0.20.0",
-        "pillow=11.0.0"
+        "pillow==11.0.0"
     ]
 )
